@@ -6,18 +6,18 @@ while (true)
     do
     {
         Console.Write("Gain: ");
-        string? inputstring = Console.ReadLine();
-        if (Int32.TryParse(inputstring, out input))
+        string? inputString = Console.ReadLine();
+        if (Int32.TryParse(inputString, out input))
         {
             break;
         }
 
-        if (Console.IsInputRedirected && inputstring is null)
+        if (Console.IsInputRedirected && inputString is null)
         {
             throw new InvalidOperationException("Input has no lines available.");
         }
 
-        Console.WriteLine($"Not A Number '{inputstring}'");
+        Console.WriteLine($"Not A Number '{inputString}'");
     } while (true);
 
     string? referenceUnit;
